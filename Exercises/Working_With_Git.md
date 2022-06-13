@@ -55,6 +55,11 @@ In this part you will learn to make changes to a directory, and learn about stas
  
 3. Double check that you are working on your branch and NOT on the main branch. If you are working on the main branch you make changes directly to the "clean files" which you want to avoid. In addition, certain files or changes may not be visible if you have been working on them earlier but have not merged them with the main branch yet. 
 4. Go to Rstudio by going to your repository and opening the Rproject within. Opening the project directly ensures that you are working in right repository and not the one previously opened in Rstudio. 
+5. Open *Rscript.R*. Write your name as a comment (or anything else you want to write) and save the file.
+6. Move back to GitKraken. You will see that new changes have appeared (the orange pencil above the tip of your branch). 
+7. Look at the "Unstaged" window. This window will 
+8. This window will 
+8. When you are satifisfied with the changes click on *Stage all changes* to stash them. These files are now ready to be committed.  
 
 1. Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and change the branch you are viewing. Notice how the files you just created are not yet 
 2. Push the changes you made earlier to the GitHub repository. 
