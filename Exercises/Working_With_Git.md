@@ -16,9 +16,9 @@ This is an exercise that will help you get familiar with Git and Github. In this
 	
 <br>
 		
-## Clone an existing repository (and make changes).
+# Clone an existing repository (and make changes).
 
-### Creating the directory
+## Creating the directory
 
 In this section you will learn how to clone an existing directory to your computer. In this case you will clone the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF).
 
@@ -37,7 +37,7 @@ In this section you will learn how to clone an existing directory to your comput
 Well done. You have now copied the directory to your computer. This is the local directory in which you can make changes. 	
 
 
-### Opening the directory in GitKraken
+## Opening the directory in GitKraken
 Now that you have created the directory, you will want to open it in GitKraken. To open the directory in GitKraken: 
 
 1. Open GitKraken
@@ -46,11 +46,11 @@ Now that you have created the directory, you will want to open it in GitKraken. 
 3. Select *Open a Repository* and select the directory in which you have placed the local repository and press open. A github interface should now appear. 
 
 
-### Making changes to the directory
+## Making changes to the directory
 
 Once you can open the directory in GitKraken you will want to make changes to it. Here you will learn how to make changes to a local directory and learn how to how to push them to a remote repository (i.e. GitHub).
 
-##### Making changes to files
+#### Making changes to files
  
 1. In GitKraken, make sure the MINA DSF directory is open (Check what it is saying in the topleft corner, under repository. Press the little arrow to view all available repositories). 
 
@@ -67,7 +67,7 @@ Once you can open the directory in GitKraken you will want to make changes to it
 
 At this point, you have made changes to the files, and you have staged them (i.e. saved them locally on your computer). However, no changes have been made to the remote repository, and nothing has been saved online. As a result, the changes you made are NOT yet visible on the remote repository. They will only become visible once you commit the files. We will do so next 
 
-##### Viewing Changes
+#### Viewing Changes
 
 1. Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload). Click on *Rscript.R* or any other file you have modified. Notice how changes you made are not yet visible. This is because the files have been *staged* but they have not yet been *committed*. As said, the changes will only become visible on the remote repository after you have *committed* them AND have pushed them to the remote repository. 
 
@@ -81,12 +81,18 @@ At this point, you have made changes to the files, and you have staged them (i.e
 7. Go to GitKraken. Make sure you are on your "personal branch". Select your branch and pull it into the main branch. Select *merge "your_branch" into main*. Your changes have now been incorporated into the main branch. You will see that your local branch (the little computer symbol) has moved ahead of the remote branch (your github profile picture) this mean that the main branch on your computer is ahead of the main branch of the remote repository (i.e. you collaborators will not be able to see your changes yet). Push the changes to the remote repository to resolve this. You can either right click on the local main branch and select push, or you can move to the main branch and press push at the top centre. 
 8. Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing the main branch. Click on *Rscript.R*. You will see that the changes you made are now visible on the main branch. Likewise, the changes you made to Rscript.R and the R-script you added will now also be visible in finder/file explorer when you are working on the main branch. 
 
-##### Pulling changes made by other collaborators
+#### Pulling changes made by other collaborators
 
 While you were working on the script, other people have also been making changes (which means that you are now looking at outdated files). To download all these changes, go to the main branch and select *pull* (the downwards pointing arrow in the top centre area). This will update your main branch. However, keep in mind that you have now only updated the files in your main branch. The files in your development branch are still outdated. To solve this, merge the main branch into your development branch. 
 
+<br>
+<br>
 
-### Create a directory for one of your projects
+---------------
+<br>
+
+
+# Create a directory for one of your projects
 
 We will assume that you want to make a GitHub for an existing project. If you want to create a new project altogether it may be easier to start by creating a github repository and cloning it to your computer, like you did in the previous exercise. 
 
