@@ -1,10 +1,3 @@
----
-title: "Working_With_Git"
-author: "Simon D. Schowanek"
-date: 2022/06/13
-output: html_document
----
-
 This is an exercise that will help you get familiar with Git and Github. In this exercise you will learn
 
 1. how to clone an existing repository
