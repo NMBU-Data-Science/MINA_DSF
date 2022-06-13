@@ -1,30 +1,18 @@
 ---
 title: "Working_With_Git"
 author: "Simon D. Schowanek"
-date: "`r Sys.Date()`"
+date: 2022/06/13
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+This is an exercise that will help you get familiar with Git and Github. In this exercise you will learn
 
-## R Markdown
+1. how to clone an existing repository
+2. How to create your own reposity
+3. How to make changes to repositories
+	* how to commit, push and pull
+	* how to deal with merge conflicts
+	* How to integrate Git and Rstudio. 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+	
+## Clone an existing repository (and make changes).
