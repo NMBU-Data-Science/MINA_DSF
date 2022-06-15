@@ -63,7 +63,7 @@ Once you can open the directory in GitKraken you will want to make changes to it
 6.  Move back to GitKraken. You will see that new changes have appeared (the orange pencil above the tip of your branch).
 ![p6](P6.png)
 
-7.  Click on the oragen pencil and look at the "Unstaged" window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made. When you are satifisfied with the changes click on *Stage all changes* to stash them. 
+7.  Click on the orange pencil and look at the "Unstaged" window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made (and the cross in the top-right to return the previous view. When you are satifisfied with the changes click on *Stage all changes* to stash them. 
 ![p7](P7.png)
 The files will now move to the *staged* window. These are the files that have received the "mark of approval" to be commited.
 ![p8](P8.png)
