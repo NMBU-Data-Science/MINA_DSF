@@ -17,7 +17,7 @@ In this section you will learn how to clone an existing directory to your comput
 
 1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF)
 2.  Press the arrow next to the green "code" button
-![test](Images/P1.png)
+![p1](Images/P1.png)
 2.  Copy link
 3.  Go to Rstudio
 4.  Select *file \> new project \> version control \> git*
@@ -37,8 +37,10 @@ Now that you have created the directory, you will want to open it in GitKraken. 
 1.  Open GitKraken
 
 2.  If this is your first repo, a repository manager should appear. If this does not happen, select *file \> open repo*.
+![p2](Images/P2.png)
 
-3.  Select *Open a Repository* and select the directory in which you have placed the local repository and press open. A github interface should now appear.
+3.  Select *Open a Repository* and select the directory in which you have placed the local repository and press open. A GitKraken interface with many lines should now appear. This interface shows the various branches that different people are working on and how they relate to each other.
+![p3](Images/P3.png)
 
 ## 1.3 Making changes to the directory
 
@@ -47,10 +49,12 @@ Once you can open the directory in GitKraken you will want to make changes to it
 ### Changing and Adding Files
 
 1.  In GitKraken, make sure the MINA DSF directory is open (Check what it is saying in the topleft corner, under repository. Press the little arrow to view all available repositories).
+![p4](Images/P4.png)
 
 2.  Right click on the main branch and select *Create Branch Here*. Select a branch name. You want to name it something that is meaningful to you and your collaborators. For the sake of this exercise, we will call this branch your "personal branch". You have now created a new branch for you to work in (= "personal branch"). You can switch to any other branch by selecting the branch you work on in the topleft corner of your screen.
 
 3.  For now, double check that you are working on your "personal branch" and NOT on the main branch. If you are working on the main branch you make changes directly to the "clean files" which you want to avoid. In addition, certain files or changes may not be visible if you have been working on them earlier but have not merged them with the main branch yet.
+![p5](Images/P5.png)
 
 4.  Go to Rstudio by going to your repository and opening the Rproject within. Opening the project directly ensures that you are working in right repository and not the one previously opened in Rstudio.
 
