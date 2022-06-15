@@ -4,6 +4,8 @@
 
 # My name is Simon
 
+# My name is Vegard
+
 # This is a line of code
 2 + 2
 
