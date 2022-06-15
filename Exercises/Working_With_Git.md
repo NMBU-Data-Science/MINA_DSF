@@ -18,7 +18,7 @@ In this section you will learn how to clone an existing directory to your comput
 1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF)
 2.  Press the arrow next to the green "code" button
 ![p1](Images/P1.png)
-2.  Copy link
+2.  Copy link (use the https link)
 3.  Go to Rstudio
 4.  Select *file \> new project \> version control \> git*
 5.  Then
