@@ -6,3 +6,9 @@
 
 # This is a line of code
 2 + 2
+
+# Here we run a linear model
+data(cars)
+str(cars)
+lm = lm(cars$speed ~ cars$dist)
+summary(lm)

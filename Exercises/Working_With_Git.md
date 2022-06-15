@@ -61,18 +61,24 @@ Once you can open the directory in GitKraken you will want to make changes to it
 5.  Open *Rscript.R*. Write your name as a comment (or anything else you want to write) and save the file.
 
 6.  Move back to GitKraken. You will see that new changes have appeared (the orange pencil above the tip of your branch).
+![p6](Images/P6.png)
 
-7.  Look at the "Unstaged" window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made. When you are satifisfied with the changes click on *Stage all changes* to stash them. The files will now move to the *staged* window. These are the files that have received the "mark of approval" to be commited.
+7.  Click on the oragen pencil and look at the "Unstaged" window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made. When you are satifisfied with the changes click on *Stage all changes* to stash them. 
+![p7](Images/P7.png)
+The files will now move to the *staged* window. These are the files that have received the "mark of approval" to be commited.
+![p8](Images/P8.png)
 
 8.  In the *Commit Message* window below, provide a brief summary of the changes that you have made. Make it brief but informative to you and your collaborators. If you want to provide more detail about the changes you have mode you can write a lengthier explanation in the *description* box.
+![p9](Images/P9.png). When you are ready press *commit*. Commits can be though of as "snapshots" or milestones of a project. You can think of it as saving a file on your computer under a new version number (i.e. project_v3 becomes project_v4). 
 
-At this point, you have made changes to the files, and you have staged them (i.e. saved them locally on your computer). However, no changes have been made to the remote repository, and nothing has been saved online. As a result, the changes you made are NOT yet visible on the remote repository. They will only become visible once you commit the files. We will do so next
+At this point, you have made changes to the files, and you have *staged* them (i.e. prepared them for committing) and you have *committed* them (i.e. saved a version control checkpoint on your computer). However, no changes have been made to the remote repository (i.e. GitHub). In other words, nothing has been saved online. As a result, the changes you made are NOT yet visible on the remote repository. They will only become visible once you *push* the files. We will do so in the next exercise.
 
 ### Viewing Changes
 
-1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload). Click on *Rscript.R* or any other file you have modified. Notice how changes you made are not yet visible. This is because the files have been *staged* but they have not yet been *committed*. As said, the changes will only become visible on the remote repository after you have *committed* them AND have pushed them to the remote repository.
+1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload). Click on *Rscript.R* or any other file you have modified. Notice how changes you made on your local repository (i.e. your computer) are not yet visible. Your changes have been *staged* and *committed* on your local repository. However, they have not been pushed to the remote repository yet. Changes will only become visible on the remote repository after they have been have *pushed*.
+![p10](Images/P10.png)
 
-2.  Go back to GitKraken and commit the changes you made earlier to the GitHub repository. You will see that that your local branch will move ahead of the remote repository (the little computer symbol will be above your github profile picture). This means that the changes you made on your computer have not yet been uploaded to the remote repository.
+2.  Go back to GitKraken and push the changes you made earlier to the remote repository (i.e. GitHub). You will see that that your local branch will move ahead of the remote repository (the little computer symbol will be above your github profile picture). This means that the changes you made on your computer have not yet been uploaded to the remote repository.
 
 3.  To upload the changes you made in your local repository press *push* (the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository. They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have "saved your changes" online, but you have not "merged" them into the rest of the project.\
 
