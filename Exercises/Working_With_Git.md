@@ -76,9 +76,9 @@ When you are ready press *commit*. Commits can be though of as "snapshots" or mi
 ![p11](Images/P11.png).
 
 
-### Viewing Changes
+### Viewing Changes 
 
-1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload). Click on *Rscript.R* or any other file you have modified. Notice how changes you made on your local repository (i.e. your computer) are not yet visible (see point 9 of the previous exercise). Your changes have been *staged* and *committed* on your local repository. However, they have not been *pushed* to the remote repository yet. Changes will only become visible on the remote repository after they have been have *pushed*.
+1.  Now go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload). Click on *Rscript.R* or any other file you have modified. Notice how changes you made on your local repository (i.e. your computer) are not yet visible (see point 9 of the previous exercise). Your changes have been *staged* and *committed* on your local repository. However, they have not been *pushed* to the remote repository yet. Changes will only become visible on the remote repository after they have been have *pushed*.
 ![p10](Images/P10.png)
 
 2.  To upload the changes you made in your local repository press *push* (= upload, the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository. They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have "saved your changes" online, but you have not "merged" them into the rest of the project. When multiple people are working on the same branch it is good practice to *pull* (= download) changes before you *push* (= upload) anything. This way you will not "reupload" an outdated file and undo work of your collaborators.
