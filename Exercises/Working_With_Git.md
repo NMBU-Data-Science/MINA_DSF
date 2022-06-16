@@ -37,7 +37,7 @@ Now that you have created the directory, you will want to open it in GitKraken. 
 1.  Open GitKraken
 
 2.  If this is your first repository, a repository manager should appear. If this does not happen, select *file \> open repo*.
-![p2](Images/P2.png)
+![p2](Images/p2.png)
 3.  Select *Open a Repository* and select the directory in which you have placed the local repository and press open. A GitKraken interface with many lines should now appear. This interface shows the various branches that different people are working on and how they relate to each other.
 ![p3](Images/P3.png)
 
