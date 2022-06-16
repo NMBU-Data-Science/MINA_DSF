@@ -31,7 +31,7 @@ In this section you will learn how to clone an existing directory to your comput
 
 1.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF)
 2.  Press the arrow next to the green "code" button
-![p1](Images/p1.png)
+![p1](Images/P1.png)
 2.  Copy link (use the https link)
 3.  Go to Rstudio
 4.  Select *file \> new project \> version control \> git*
@@ -96,7 +96,7 @@ When you are ready press *commit*. Commits can be though of as "snapshots" or mi
 Because you have not *pushed* any changes to the remote repository yet, your branch name will not be in there, but there will be other branches. In other words, all the changes you made on your computer are not yet visible on the remote repository (see point 9 of the previous exercise).
 
 2.  To upload the changes you made in your local repository, go to GitKraken and press *push* (= upload, the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository. They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have "saved your changes" online, but you have not "merged" them into the rest of the project. When multiple people are working on the same branch it is good practice to *pull* (= download) changes before you *push* (= upload) anything. This way you will not "reupload" an outdated file and undo work of your collaborators.
-![p12](Images/p12.png)
+![p12](Images/P12.png)
 3.  Go to Rstudio and make an R-script where you post a link to your favourite wikipedia page as a comment. Save the Rscript in the *exercise scripts* folder which you will find the in the *exercise* folder in the Repository" (so --\> Respository_Name/Exercises/Exercise Scripts/YourRScript.R). *Push* the file to the remote repository.
 
 5.  Go to the [MINA DSF Github](https://github.com/SimonSchowanek/MINA_DSF) and make sure you are viewing your "personal branch" (GitHub will resort to the main branch everytime you reload, see point 1 if you have forgotten how to do this). Click on *Rscript.R* or any other file you have modified. Notice how the changes you made and the Rscript you created are now visible when looking at your branch. Now select the main branch and inspect the file again. You will notice that neither the changes you made nor the script you created are visible here. This is because you haven't merged your development branch with the main branch yet.
