@@ -10,5 +10,6 @@ The repo provides a place for students and employees to discuss data managements
 
 # Useful Resources to start with Git
 
--   [Happygitwithr](https://happygitwithr.com/index.html)
--   [Gitkraken](https://www.gitkraken.com/)
+-  [Happygitwithr](https://happygitwithr.com/index.html)
+-  [Gitkraken](https://www.gitkraken.com/)
+-  The [exercises from our Git and GitHub introduction workshop](https://github.com/SimonSchowanek/MINA_DSF/blob/main/Exercises/Working_With_Git.md)
