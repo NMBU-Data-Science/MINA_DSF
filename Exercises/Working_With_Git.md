@@ -10,6 +10,26 @@ This is an exercise that will help you get familiar with Git and Github. In this
     -   how to deal with merge conflicts
     -   How to integrate Git and Rstudio.
 
+
+<br>
+
+-------------
+
+Before starting this tutorial make sure that you have 
+
+* a recent version of R 
+* a recent version of Rstudio
+* a GitHub account
+* downloaded Git (if you use an NMBU computer you can download it easily via the software centre)
+* downloaded GitKraken
+
+----------
+
+<br>
+
+
+
+
 # 1. Using the Issues page in Github
 
 In the MINA Data and Statistics Forum we will regularly make use of the issues page on GitHub. This exercise teaches you how to use "Issues".
@@ -95,7 +115,7 @@ When you are ready press *commit*. Commits can be though of as "snapshots" or mi
 ![p10](Images/p10.png)
 Because you have not *pushed* any changes to the remote repository yet, your branch name will not be in there, but there will be other branches. In other words, all the changes you made on your computer are not yet visible on the remote repository (see point 9 of the previous exercise).
 
-2.  To upload the changes you made in your local repository, go to GitKraken and press *push* (= upload, the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository. They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have "saved your changes" online, but you have not "merged" them into the rest of the project. When multiple people are working on the same branch it is good practice to *pull* (= download) changes before you *push* (= upload) anything. This way you will not "reupload" an outdated file and undo work of your collaborators.
+2.  To upload the changes you made in your local repository, go to GitKraken and press *push* (= upload, the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository (NOTE: if you are not a collaborator on the repository, you may not be able to push any changes. Contact Simon if you want to become a collaborator). They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have "saved your changes" online, but you have not "merged" them into the rest of the project. When multiple people are working on the same branch it is good practice to *pull* (= download) changes before you *push* (= upload) anything. This way you will not "reupload" an outdated file and undo work of your collaborators.
 ![p12](Images/P12.png)
 3.  Go to Rstudio and make an R-script where you post a link to your favourite wikipedia page as a comment. Save the Rscript in the *exercise scripts* folder which you will find the in the *exercise* folder in the Repository" (so --\> Respository_Name/Exercises/Exercise Scripts/YourRScript.R). *Push* the file to the remote repository.
 
