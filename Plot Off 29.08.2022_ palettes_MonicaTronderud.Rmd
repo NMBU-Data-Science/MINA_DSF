@@ -1,6 +1,6 @@
 ---
 title: "Selecting and visualizing colour palettes"
-author: "Monica"
+author: "Monica" https://github.com/pr0nica/pr0nica
 date: '2022-08-26'
 output: html_document
 runtime: shiny
