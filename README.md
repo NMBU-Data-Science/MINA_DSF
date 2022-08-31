@@ -8,8 +8,17 @@ The repo provides a place for students and employees to discuss data managements
 
 -   post any statistical questions you have on the issues page. For other issues, please have a look at the Teams channel.
 
-# Useful Resources to start with Git
+# Resources and Exercises from Previous Meetings
+
+## Git
 
 -  [Happygitwithr](https://happygitwithr.com/index.html)
 -  [Gitkraken](https://www.gitkraken.com/)
--  The [exercises from our Git and GitHub introduction workshop](https://github.com/SimonSchowanek/MINA_DSF/blob/main/Exercises/Working_With_Git.md)
+-  The [exercises from our Git and GitHub introduction workshop](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/Git/Working_With_Git.md)
+
+## Creating Plots
+- [Various Resources to Create Better Plots](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/Plotting/Plot_off_29_08_2022_Resources.pdf)
+
+## Writing Manuscripts in RMarkdown
+-  [The example script of a Rmarkdown manuscript](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/RMarkdown/Rmarkdown_Manuscript.Rmd)
+-  [The output of the above script] (https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/RMarkdown/Rmarkdown_Manuscript.pdf)

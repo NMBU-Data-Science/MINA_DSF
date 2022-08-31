@@ -1,0 +1,190 @@
+---
+title: "Selecting and visualizing colour palettes"
+author: "Monica" https://github.com/pr0nica/pr0nica
+date: '2022-08-26'
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# install.packages("ggplot2")
+# install.packages("shiny")
+# install.packages("RColorbrewer")
+# install.packages("scales")
+# install.packages("MetBrewer")
+# install.packages("colorBlindness")
+
+
+library(ggplot2)
+library(shiny)
+
+```
+
+## RColorbrewer 
+This palette has a collection of nice palettes with many of them being colorblind friendly.
+The code below imports and shows how to display these colours, make a palette and visualise that palette in a plot. 
+
+```{r  RcolorBrewer}
+library(RColorBrewer) #import your package
+display.brewer.all() #Displays all available palettes as plot
+display.brewer.all(colorblindFriendly = T) # Show only colorblind friendly ones
+display.brewer.pal(10, "RdYlBu") #Pick a palette and number of colours
+```
+
+There is also an interactive online tool for selecting colours similar to RColorbrewer:
+
+https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3 
+
+# Want to visualise the colour palettes (and hex code) before plotting? Here are some tricks:
+
+### 1. "show_col"
+This one gives you the colour and hex code together, if you want to compile your own palettes.
+```{r show_col}
+library(scales)
+
+pal <- brewer.pal("RdYlBu", n=5) #define a palette
+show_col(pal)
+
+```
+
+
+### 2. volcano image
+I find this one useful to for gradients
+```{r volcano}
+pal <- brewer.pal("RdYlBu", n=5) #define a palette
+image(volcano, col = pal) #Use volcano plot for a quick visualisation of the colours
+
+```
+
+### 3. ggplot
+A cleaner way to display a palette with ggplot
+```{r qplot}
+pal <- brewer.pal("RdYlBu", n=5) #define a palette
+
+qplot(x=1:5, y = 1, fill=factor(1:5), geom="tile") +
+  scale_fill_manual(values = pal) +
+  theme_void()+
+  theme(legend.position="none") 
+
+
+
+```
+
+
+
+# Met Brewer palettes 
+
+These palettes are inspired by famous artwork display in the New York Metropolitan museum. 
+Here you can see all the palettes: 
+https://twitter.com/blakerobmills/status/1478873962142593026?lang=ar-x-fm 
+
+And here you can see the artwork they are created from:
+https://github.com/BlakeRMills/MetBrewer/tree/main/PaletteImages 
+
+```{r MetBrewer}
+library(MetBrewer)
+names(MetPalettes) #list all palettes
+MetBrewer::colorblind.friendly("Thomas") #check if colorblind friendly
+colorblind_palettes	 #list of all colorblind friendly palettes
+
+```
+
+
+#Change your palette directly in a figure!
+
+Here's a simple tool to change colours for your palette one by one in shiny. I'm using colours from the MetBrewer as an example
+
+```{r interactive, echo=TRUE, message=FALSE, warning=FALSE}
+library(colorBlindness)
+
+Hiroshige<- MetBrewer::met.brewer(name="Hiroshige",n=5,type="discrete")
+show_col(Hiroshige)
+
+#Make your input panel for colours (three variables, three colour options):
+inputPanel(
+  selectInput("palette1", label = "Setosa",
+              choices = c(Hiroshige)), 
+  
+  selectInput("palette2", label = "Versicolor",
+              choices = c(Hiroshige)),
+  
+  selectInput("palette3", label = "Virginica",
+              choices = c(Hiroshige)),
+  
+  sliderInput("alpha", label = "transparency",
+              min = 0.01, max = 1, value = 0.5, step = 0.05)
+)
+
+
+#Make your plot:
+renderPlot({
+  ggplot(iris)+
+    geom_boxplot(aes(y=Sepal.Length,x=Species, group=Species, fill=Species),  col="black",alpha=input$alpha)+
+    scale_color_manual(values=c(input$palette1, input$palette2,input$palette3), aesthetics = c("fill"))+
+    theme_bw()
+
+})
+
+```
+
+#Check your plot for colourblind-friendlyness and black-white print
+
+The package "colorBlindness" allows you check how your colours look like with the two most common forms of color blindness (deuteranopia and protanopia). Below is a simple example, check out their guide for more details:
+
+https://cran.r-project.org/web/packages/colorBlindness/vignettes/colorBlindness.html 
+
+```{r colorBlindness1}
+library(colorBlindness)
+
+#Example with Hiroshige (my personal favourite)
+p1<- ggplot(data=iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+  geom_violin() +
+  scale_fill_manual(values=met.brewer("Hiroshige", 3))+
+  theme_bw()
+
+cvdPlot(p1)
+
+```
+
+The plot above didn't look too good in BW, and while the colours are distinguishable I would prefer them to be more contrasting. Let's try some other colours with an interactive plot:
+
+```{r colorBlindness2}
+Homer1 <- met.brewer(name="Homer1",n=5,type="discrete")
+show_col(Homer1)
+
+#Example with Hiroshige (my personal favourite)
+
+#Make your input panel for colours (three variables, three colour options):
+inputPanel(
+  selectInput("col1", label = "Setosa",
+              choices = c(Homer1)), 
+  
+  selectInput("col2", label = "Versicolor",
+              choices = c(Homer1)),
+  
+  selectInput("col3", label = "Virginica",
+              choices = c(Homer1)),
+  
+  sliderInput("alpha", label = "transparency",
+              min = 0.01, max = 1, value = 0.5, step = 0.05)
+)
+
+
+#Make your plot:
+renderPlot({
+  p1<- ggplot(iris)+
+    geom_boxplot(aes(y=Sepal.Length,x=Species, group=Species, fill=Species),  col="black",alpha=input$alpha)+
+    scale_color_manual(values=c(input$col1, input$col2,input$col3), aesthetics = c("fill"))+
+    theme_bw()
+cvdPlot(p1)
+
+})
+
+
+
+
+```
+
+
