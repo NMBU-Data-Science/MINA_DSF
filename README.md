@@ -21,4 +21,4 @@ The repo provides a place for students and employees to discuss data managements
 
 ## Writing Manuscripts in RMarkdown
 -  [The example script of a Rmarkdown manuscript](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/RMarkdown/Rmarkdown_Manuscript.Rmd)
--  [The output of the above script] (https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/RMarkdown/Rmarkdown_Manuscript.pdf)
+-  [The output of the above script](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/RMarkdown/Rmarkdown_Manuscript.pdf)
