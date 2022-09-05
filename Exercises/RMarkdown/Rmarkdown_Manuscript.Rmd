@@ -41,17 +41,12 @@ Judit Fiete Schultz^1^, Ursel Lenz Wiegand^2^, Kuno Alfreda Ackermann^2,3^
 
 \vspace{10mm}
 
+
 # Abstract
 
 Before you start:
 
-1)  Install LaTeX (if you haven't done so already)
-
-    -   TinyTeX in R: tinytex::install_tinytex()
-
-    -   MiKTeX on Windows - [http://miktex.org](http://miktex.org/ "http://miktex.org")
-
-    -   MacTeX on macOS - <https://tug.org/mactex/>
+1) Make sure you have Rmarkdown and TinyTex installed (and run the TinyTex command)
 
 2)  Press knit in the ribbon above to render this script into a manuscript. Alternatively press cmd + shift +k (mac) or ctrl + shift + k (windows).
 
@@ -95,7 +90,7 @@ Before knitting, change the text inside`\graphicspath``to the directory where yo
 This is another way to plot the same figure
 
 
-![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure1.png)
+![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure2.png)
 
 
 The `knitr` function `knitr::include_graphics()` can also be used to insert figures. Howerver, I have not used it much myself.
