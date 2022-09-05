@@ -32,7 +32,7 @@ getwd()
 
 ## Create and save Plot
 #–––––––––––––––––––––––––––––––––––––––––––––––––
-png("/Users/au572919/Research/NMBU/MINA_DSF/Exercises/RMarkdown/Figure1.png")
+png("./Exercises/RMarkdown/Figure1.png")
 plot(mtcars$mpg, mtcars$disp, col = "red", pch = 16, main = "this is a plot")
 dev.off()
 
