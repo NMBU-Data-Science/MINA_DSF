@@ -2,19 +2,21 @@
 geometry: margin=1.0in
 font-size: 11pt
 header-includes:
-  - \usepackage{helvet}
-  - \renewcommand*\familydefault{\sfdefault}
-  - \usepackage{setspace}
-  - \doublespacing
-  - \usepackage[left]{lineno}
-  - \linenumbers
-output: pdf_document
+- \usepackage{helvet}
+- \renewcommand*\familydefault{\sfdefault}
+- \usepackage{setspace}
+- \doublespacing
+- \usepackage[left]{lineno}
+- \linenumbers
+output:
+  pdf_document: default
 bibliography: references.bib
 ---
 
 ```{r, echo = FALSE}
 #install.packages(english)
 library(english)
+
 ```
 
 # Baudrillardist hyperreality and socialist realism
@@ -77,6 +79,8 @@ $$
 
 There are various ways to incorporate plots. Here I show a fairly complicated method (from LaTeX) that gives us much freedom. One of the advantages of this methods is that it allows us to reference the plot in text as Figure \ref{fig:scatterplot}. When new plots are added, the reference is updated automatically. A downside of using LaTeX to insert the image is that it looks for the best place to position the image. As a result, the image can sometimes end up away from the in-text reference. Here we use the `\clearpage` command to solve this issue. This command moves the text following the figure to the next page. This way LaTeX has ample space to position the figure.
 
+Before knitting, change the text inside`\graphicspath``to the directory where your folder is located
+
 ```{=tex}
 \begin{figure}[h]
   \centering
@@ -86,6 +90,17 @@ There are various ways to incorporate plots. Here I show a fairly complicated me
   \label{fig:scatterplot}
 \end{figure}
 ```
+
+
+This is another way to plot the same figure
+
+
+![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure1.png)
+
+
+The `knitr` function `knitr::include_graphics()` can also be used to insert figures. Howerver, I have not used it much myself.
+
+
 \clearpage
 
 We also show a table. One of the easiest ways to do so is by loading data frames into the environment and printing them. This is essentially what we do in the code block below. However, we use the `kable` function from the `knitr` package to make it look pretty. Once again, we use `echo = False` to make sure the code is not printed in the final manuscript.
