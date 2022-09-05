@@ -21,7 +21,7 @@ library(english)
 
 ## `r Sys.Date()`
 
-\vspace{20mm}
+\vspace{10mm}
 
 ## Authors
 
@@ -37,15 +37,25 @@ Judit Fiete Schultz^1^, Ursel Lenz Wiegand^2^, Kuno Alfreda Ackermann^2,3^
 
 ^3^ Admiral Milton Atkinson's Military School for Paranormal Investigation
 
-\vspace{20mm}
+\vspace{10mm}
 
 # Abstract
 
-Here are some guidelines listed as bullet points.
+Before you start:
 
-1)  Press knit in the ribbon above to render this script into a manuscript. Alternatively press cmd + shift +k (mac) or ctrl + shift + k (windows).
+1)  Install LaTeX (if you haven't done so already)
 
-2)  To change the data and figures used in this script, open the file called `RMarkDown_Exercise_Script.R`. It is located in the same folder as this file (Mina_DSF \> Exercises \> Rmarkdown)
+    -   TinyTeX in R: tinytex::install_tinytex()
+
+    -   MiKTeX on Windows - [http://miktex.org](http://miktex.org/ "http://miktex.org")
+
+    -   MacTeX on macOS - <https://tug.org/mactex/>
+
+2)  Press knit in the ribbon above to render this script into a manuscript. Alternatively press cmd + shift +k (mac) or ctrl + shift + k (windows).
+
+3)  [If you want to learn how to use markdown, click here](https://www.markdownguide.org/basic-syntax/)
+
+4)  To change the data and figures used in this script, open the file called `RMarkDown_Exercise_Script.R`. It is located in the same folder as this file (Mina_DSF \> Exercises \> Rmarkdown)
 
 \newpage
 
