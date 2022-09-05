@@ -79,8 +79,7 @@ Before knitting, change the text inside`\graphicspath``to the directory where yo
 ```{=tex}
 \begin{figure}[h]
   \centering
-  \graphicspath{{/Users/au572919/Research/NMBU/MINA_DSF}}
-  {\includegraphics[width=15cm]{./Exercises/RMarkdown/Figure1.png}}
+  {\includegraphics[width=15cm]{Figure1.png}}
   \caption{Here is a plot}
   \label{fig:scatterplot}
 \end{figure}
