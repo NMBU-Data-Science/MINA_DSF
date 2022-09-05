@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  5 SEP 2022 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  5 SEP 2022 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -582,13 +582,10 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-</Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.png, id=2
-9, 481.8pt x 481.8pt>
-File: /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.png 
-Graphic file (type png)
-<use /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.png>
-Package pdftex.def Info: /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMa
-rkdown/Figure1.png  used on input line 205.
+<Figure1.png, id=29, 481.8pt x 481.8pt>
+File: Figure1.png Graphic file (type png)
+<use Figure1.png>
+Package pdftex.def Info: Figure1.png  used on input line 204.
 (pdftex.def)             Requested size: 426.801pt x 426.801pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -596,32 +593,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./Figure2.png, id=31, 481.8pt x 481.8pt>
 File: ./Figure2.png Graphic file (type png)
 <use ./Figure2.png>
-Package pdftex.def Info: ./Figure2.png  used on input line 214.
+Package pdftex.def Info: ./Figure2.png  used on input line 213.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
-[2] [3 </Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.pn
-g>] [4 <./Figure2.png>]
-Overfull \hbox (0.12878pt too wide) in alignment at lines 243--271
+[2] [3 <./Figure1.png>] [4 <./Figure2.png>]
+Overfull \hbox (0.12878pt too wide) in alignment at lines 242--270
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 271--298
+Overfull \hbox (0.12878pt too wide) in alignment at lines 270--297
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 298--311
+Overfull \hbox (0.12878pt too wide) in alignment at lines 297--310
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 328.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 327.
 [5
 
 ] [6] (./Rmarkdown_Manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 13203 strings out of 478994
- 195811 string characters out of 5858184
+ 13202 strings out of 478994
+ 195445 string characters out of 5858184
  546939 words of memory out of 5000000
  30272 multiletter control sequences out of 15000+600000
  447696 words of font info for 141 fonts, out of 8000000 for 9000
@@ -639,7 +635,7 @@ sy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Rmarkdown_Manuscript.pdf (6 pages, 120451 bytes).
+Output written on Rmarkdown_Manuscript.pdf (6 pages, 124840 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
