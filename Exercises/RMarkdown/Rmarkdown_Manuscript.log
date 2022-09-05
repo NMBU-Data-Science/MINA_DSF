@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  5 SEP 2022 11:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  5 SEP 2022 13:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -593,37 +593,42 @@ File: /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.png
 Graphic file (type png)
 <use /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.png>
 Package pdftex.def Info: /Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMa
-rkdown/Figure1.png  used on input line 210.
+rkdown/Figure1.png  used on input line 213.
 (pdftex.def)             Requested size: 426.801pt x 426.801pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+<./Figure1.png, id=33, 481.8pt x 481.8pt>
+File: ./Figure1.png Graphic file (type png)
+<use ./Figure1.png>
+Package pdftex.def Info: ./Figure1.png  used on input line 222.
+(pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 [2] [3 </Users/au572919/Research/NMBU/MINA_DSF/./Exercises/RMarkdown/Figure1.pn
-g>]
-Overfull \hbox (0.12878pt too wide) in alignment at lines 236--264
+g>] [4 <./Figure1.png>]
+Overfull \hbox (0.12878pt too wide) in alignment at lines 251--279
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 264--291
+Overfull \hbox (0.12878pt too wide) in alignment at lines 279--306
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 291--304
+Overfull \hbox (0.12878pt too wide) in alignment at lines 306--319
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 321.
-[4
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 336.
+[5
 
-] [5] (./Rmarkdown_Manuscript.aux) ) 
+] [6] (./Rmarkdown_Manuscript.aux) ) 
 Here is how much of TeX's memory you used:
- 13232 strings out of 478994
- 196212 string characters out of 5858184
- 546948 words of memory out of 5000000
- 30296 multiletter control sequences out of 15000+600000
+ 13239 strings out of 478994
+ 196314 string characters out of 5858184
+ 546939 words of memory out of 5000000
+ 30301 multiletter control sequences out of 15000+600000
  448063 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,7n,88p,650b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -639,10 +644,10 @@ sy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Rmarkdown_Manuscript.pdf (5 pages, 108247 bytes).
+Output written on Rmarkdown_Manuscript.pdf (6 pages, 120726 bytes).
 PDF statistics:
- 147 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 41046 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 41051 words of extra memory for PDF output out of 42996 (max. 10000000)
 
