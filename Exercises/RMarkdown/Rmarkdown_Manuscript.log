@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  5 SEP 2022 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.30)  7 SEP 2022 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -585,7 +585,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 <Figure1.png, id=29, 481.8pt x 481.8pt>
 File: Figure1.png Graphic file (type png)
 <use Figure1.png>
-Package pdftex.def Info: Figure1.png  used on input line 204.
+Package pdftex.def Info: Figure1.png  used on input line 201.
 (pdftex.def)             Requested size: 426.801pt x 426.801pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -593,25 +593,25 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./Figure2.png, id=31, 481.8pt x 481.8pt>
 File: ./Figure2.png Graphic file (type png)
 <use ./Figure2.png>
-Package pdftex.def Info: ./Figure2.png  used on input line 213.
+Package pdftex.def Info: ./Figure2.png  used on input line 210.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 [2] [3 <./Figure1.png>] [4 <./Figure2.png>]
-Overfull \hbox (0.12878pt too wide) in alignment at lines 242--270
+Overfull \hbox (0.12878pt too wide) in alignment at lines 239--267
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 270--297
+Overfull \hbox (0.12878pt too wide) in alignment at lines 267--294
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (0.12878pt too wide) in alignment at lines 297--310
+Overfull \hbox (0.12878pt too wide) in alignment at lines 294--307
  [] [] [] [] [] [] [] [] [] [] [] [] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 327.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 324.
 [5
 
 ] [6] (./Rmarkdown_Manuscript.aux) ) 
@@ -635,7 +635,7 @@ sy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/tex
 live/2021/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Rmarkdown_Manuscript.pdf (6 pages, 124840 bytes).
+Output written on Rmarkdown_Manuscript.pdf (6 pages, 124596 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  133 compressed objects within 2 object streams
