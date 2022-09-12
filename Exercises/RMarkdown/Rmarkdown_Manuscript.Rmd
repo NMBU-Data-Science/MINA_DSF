@@ -15,7 +15,7 @@ bibliography: references.bib
 
 ```{r, echo = FALSE}
 #install.packages(english)
-library(english)
+library(english) # turns numbers into text. 
 
 ```
 
@@ -41,12 +41,11 @@ Judit Fiete Schultz^1^, Ursel Lenz Wiegand^2^, Kuno Alfreda Ackermann^2,3^
 
 \vspace{10mm}
 
-
 # Abstract
 
 Before you start:
 
-1) Make sure you have Rmarkdown and TinyTex installed (and run the TinyTex command)
+1)  Make sure you have Rmarkdown and TinyTex installed (and run the TinyTex command)
 
 2)  Press knit in the ribbon above to render this script into a manuscript. Alternatively press cmd + shift +k (mac) or ctrl + shift + k (windows).
 
@@ -60,7 +59,9 @@ Before you start:
 
 We have added a code block to the manuscript. This can be useful if you want to incorporate figures or data into the manuscript. However, we define `echo = FALSE` .This way the code block is not visible in the output of the manuscript (though the output of the code block still is)
 
-<br> It is also possible to add [hyperlinks](http://www.coveredbridgesociety.org/)
+<br>
+
+It is also possible to add [hyperlinks](http://www.coveredbridgesociety.org/)
 
 # Methods
 
@@ -74,8 +75,6 @@ $$
 
 There are various ways to incorporate plots. Here I show a fairly complicated method (from LaTeX) that gives us much freedom. One of the advantages of this methods is that it allows us to reference the plot in text as Figure \ref{fig:scatterplot}. When new plots are added, the reference is updated automatically. A downside of using LaTeX to insert the image is that it looks for the best place to position the image. As a result, the image can sometimes end up away from the in-text reference. Here we use the `\clearpage` command to solve this issue. This command moves the text following the figure to the next page. This way LaTeX has ample space to position the figure.
 
-Before knitting, change the text inside`\graphicspath``to the directory where your folder is located
-
 ```{=tex}
 \begin{figure}[h]
   \centering
@@ -84,16 +83,11 @@ Before knitting, change the text inside`\graphicspath``to the directory where yo
   \label{fig:scatterplot}
 \end{figure}
 ```
-
-
 This is another way to plot the same figure
-
 
 ![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure2.png)
 
-
 The `knitr` function `knitr::include_graphics()` can also be used to insert figures. Howerver, I have not used it much myself.
-
 
 \clearpage
 
