@@ -2,18 +2,24 @@
 geometry: margin=1.0in
 font-size: 11pt
 header-includes:
-- \usepackage{helvet}
-- \renewcommand*\familydefault{\sfdefault}
-- \usepackage{setspace}
-- \doublespacing
-- \usepackage[left]{lineno}
-- \linenumbers
+  - \usepackage{helvet}
+  - \renewcommand*\familydefault{\sfdefault}
+  - \usepackage{setspace}
+  - \doublespacing
+  - \usepackage[left]{lineno}
+  - \linenumbers
+  - \usepackage{float} \floatplacement{figure}{H} 
+  - \newcommand{\beginsupplement}{\setcounter{table}{0}
+  - \renewcommand{\thetable}{S\arabic{table}}
+  - \setcounter{figure}{0} 
+  - \renewcommand{\thefigure}{S\arabic{figure}}}
 output:
   pdf_document: default
+  word_document: default
 bibliography: references.bib
 ---
 
-```{r, echo = FALSE}
+```{r, echo = F}
 #install.packages(english)
 library(english) # turns numbers into text. 
 
@@ -63,6 +69,8 @@ We have added a code block to the manuscript. This can be useful if you want to 
 
 It is also possible to add [hyperlinks](http://www.coveredbridgesociety.org/)
 
+<!--# ddddddddddddddfknfkzkd -->
+
 # Methods
 
 Rmarkdown is also great for formulas because it can incorporate LaTeX. \textcolor{red}{Using LaTeX also allows us to change various layout features, such as text colour}.
@@ -73,7 +81,7 @@ $$
 
 # Results
 
-There are various ways to incorporate plots. Here I show a fairly complicated method (from LaTeX) that gives us much freedom. One of the advantages of this methods is that it allows us to reference the plot in text as Figure \ref{fig:scatterplot}. When new plots are added, the reference is updated automatically. A downside of using LaTeX to insert the image is that it looks for the best place to position the image. As a result, the image can sometimes end up away from the in-text reference. Here we use the `\clearpage` command to solve this issue. This command moves the text following the figure to the next page. This way LaTeX has ample space to position the figure.
+There are various ways to incorporate plots. Here I show a fairly complicated method (from LaTeX) that gives us much freedom. One of the advantages of this methods is that it allows us to reference the plot in text as Figure \ref{fig:scatterplot}. When new plots are added, the reference is updated automatically. A downside of using LaTeX to insert the image is that it looks for the best place to position the image. As a result, the image can sometimes end up away from the in-text reference. Here we use the `\clearpage` command to solve this issue. This command moves the text following the figure to the next page. This way LaTeX has ample space to position the figure. We can also reference figures in the supplementary information (Fig. \ref{fig:figure3})
 
 ```{=tex}
 \begin{figure}[h]
@@ -85,11 +93,14 @@ There are various ways to incorporate plots. Here I show a fairly complicated me
 ```
 This is another way to plot the same figure
 
-![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure2.png)
-
-The `knitr` function `knitr::include_graphics()` can also be used to insert figures. Howerver, I have not used it much myself.
 
 \clearpage
+
+![This is another, easy way to plot a figure. However it is less customisable than the latex option](./Figure2.png)
+
+\clearpage
+
+The `knitr` function `knitr::include_graphics()` can also be used to insert figures. However, I have not used it much myself.
 
 We also show a table. One of the easiest ways to do so is by loading data frames into the environment and printing them. This is essentially what we do in the code block below. However, we use the `kable` function from the `knitr` package to make it look pretty. Once again, we use `echo = False` to make sure the code is not printed in the final manuscript.
 
@@ -103,6 +114,21 @@ kable(head(mtcars), caption= "here is a caption")
 
 We report on the characteristics of **`r nrow(mtcars)`** different cars. Note that we can also write this as plain text "we report on the characteristics of **`r as.character(as.english((nrow(mtcars))))`** different cars". In both cases, the number is not manually written by the author. Instead, it is R code. The written value in the Manuscript will thus change if the underlying data changes.
 
-Here is a references that has nothing to do with cars [@abraham2019]. We can also add an text reference, such as the paper that @fiedel2018 wrote. These references are automatically added to the bottom of the manuscript. I personally work with Zotero, but you can add references from a variety of sources. To insert references, go to the visual editor. Then look for *insert* \> *citation.* Alternatively, you can type the `@` sign when working in the visual editor.
+Here is a references that has nothing to do with cars [@abraham2019]. We can also add an text reference, such as the paper that @fiedel2018 wrote. These references are automatically added to the bottom of the manuscript. I personally work with Zotero, but you can add references from a variety of sources. To insert references, go to the visual editor. Then look for *insert* \> *citation.* Alternatively, you can type the `@` sign when working in the visual editor. [@abraham2014]
+
+
+# Supplementary Information
+
+\beginsupplement
+
+```{=tex}
+\begin{figure}[h]
+  \centering
+  {\includegraphics[width=15cm]{Figure3.png}}
+  \caption{Here is a plot}
+  \label{fig:figure3}
+\end{figure}
+```
+
 
 # References {#references .unnumbered}
