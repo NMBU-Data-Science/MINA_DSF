@@ -1,0 +1,60 @@
+
+Spatial Data Analysis Course - Data and Stats Forum at MINA
+
+Instructor: Hans Ole Ørka 
+(hans-ole.orka@nmbu.no)
+
+Researcher at MINA in forest inventory and remote sensing, teaches GIS courses now and then, forester, R-addict and husky owner 😊
+
+
+Contact: Reed McKay (She/Her) 
+apmc@nmbu.no
+
+PhD Student at MINA studying bat and forest ecology, Data and Stats Forum organizer. Has a habit of writing poetry in R Markdown between code chunks. 
+
+
+Monday February 6, 2023
+Sørhellinga (room to be determined)
+
+
+Expected previous knowledge, skills and tools: 
+Participants are expected to have the R and R studio uploaded and have previous experience working independently and troubleshooting in R. If you need help with installation, please inform Reed and come an hour early to get help with this. 
+A brief review of basic concepts and theories behind how spatial data is defined and organized will be covered in the beginning of the workshop but participants should be familiar with and be able to describe examples of the following terms:
+•	Geographic information system 
+•	Vector and raster representation
+•	Attribute data
+•	Coordinate systems
+•	Georeferencing and Geocoding
+•	Image data
+•	Remote sensing
+•	Models of spatial information (field or object)
+•	FAIR data principles
+
+Description
+This course is intended to provide a foundation in handling, visualizing, and preparing spatial data for further analysis. Several examples of common spatial analyses (geoprocessing, transformations, interpolation, raster analysis.) will also be covered in the course.
+
+Masters and PhD students as well as researchers who want a refresher or introduction to best practices for working with spatial data will get the most out of this course.
+
+
+Tentative Schedule 
+09:00 - 11:30
+Introductory lectures and simple exercises
+Importing, exploring, and visualizing a variety of spatial data.
+
+11:30 - 12:00
+Lunch (participants responsible for their own lunch)  
+
+12:00 - 15:00
+Introduction to several types of spatial analysis
+Topics related to exercises: 
+Overlays and buffers
+Summarizing
+Aggregating
+Interpolation
+Raster analysis
+Break into small groups, go through exercises
+
+Further information
+For questions about the course, reach out to Reed McKay (apmc@nmbu.no) and Hans Ole directly (hans-ole.orka@nmbu.no).
+
+To follow the Data and Stats Forum at MINA, become part of the Team “Data and Stats Forum at MINA” and follow the forum’s GitHub.  
