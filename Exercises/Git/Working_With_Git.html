@@ -71,37 +71,39 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="github-workshop-exercise" class="level1">
 <h1>Github Workshop Exercise</h1>
-<p>This is an exercise that will help you get familiar with Git and Github. In this exercise you will learn</p>
+<p>This exercise will help you get familiar with Git and Github. In this exercise you will learn</p>
 <ol type="1">
+<li>Install Git and all the tools to work with it.<br>
+</li>
 <li>Learn how to use Issues on GitHub.</li>
-<li>how to clone an existing repository</li>
-<li>How to create your own reposity</li>
-<li>How to make changes to repositories, including:
+<li>Learn how to clone an existing repository from Github</li>
+<li>Learn how to create your own repository</li>
+<li>Learn how to make changes to repositories using GitKraken and Rstudio, including:
 <ul>
 <li>how to commit, push and pull</li>
 <li>how to deal with merge conflicts</li>
 <li>How to integrate Git and Rstudio.</li>
 </ul></li>
 </ol>
-<p><br></p>
-<hr>
+<p>This workshop is heavily based on the information provided in <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>. For detailed information, I recommend you visit this website.</p>
+</section>
+<section id="preparation" class="level1">
+<h1>0. Preparation</h1>
 <p>Before starting this tutorial make sure that you have</p>
 <ul>
-<li>a recent version of R</li>
-<li>a recent version of Rstudio</li>
-<li>a GitHub account</li>
-<li>downloaded Git (if you use an NMBU computer you can download it easily via the software centre)</li>
-<li>downloaded GitKraken</li>
+<li>a recent version of <a href="https://www.r-project.org">R</a></li>
+<li>a recent version of <a href="https://posit.co/download/rstudio-desktop/">Rstudio</a></li>
+<li>a <a href="https://github.com">GitHub</a> account</li>
+<li>downloaded Git (if you use an NMBU computer you can download it easily via the software centre). If not, <a href="https://happygitwithr.com/install-git">follow the following instructions</a>.</li>
+<li>downloaded <a href="https://gitkraken.dev">GitKraken</a></li>
 </ul>
-<hr>
-<p><br></p>
 </section>
 <section id="using-the-issues-page-in-github" class="level1">
 <h1>1. Using the Issues page in Github</h1>
-<p>In the MINA Data and Statistics Forum we will regularly make use of the issues page on GitHub. This exercise teaches you how to use “Issues”.</p>
+<p>Issues are a useful collaboration feature from Github. This exercise teaches you how to use “Issues”.</p>
 <ol type="1">
 <li>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a> and click on the “Issues” tab.<img src="Images/p14.png" class="img-fluid" alt="p14"> This will bring you to the “Issues” page. Issues are the place on GitHub where collaboration happens. They are posts, where collaborators can discuss problems, track bugs, or work on tasks together. <img src="Images/p15.png" class="img-fluid" alt="p15"></li>
-<li>You an click on any issue to see the discussion. Click on the “Here is an example issue.” to see the discussion within. Leave a comment in the issue. You can tag collaborators using the “@” sign. You can also edit your comment using Markdown.</li>
+<li>You an click on any issue to see the discussion. Click on the “Here is an example issue.” to see the discussion within. Leave a comment in the issue. You can tag collaborators using the “@” sign. You can also edit your comment using Markdown. You can also create a new issue.</li>
 <li>The panel on the right provides some tools to organise group work. <img src="Images/p16.png" class="img-fluid" alt="p16"> Clicking on “assignees” will let you assign people responsible for solving of keeping track of an issue. Clicking on “labels” lets you label issues, which can help you keep an overview of which sorts of problems exist. If you want to create a new label scroll down through the list of labels and click on “edit labels”. This will take you to a new window where you can modify labels however you want. You can also add issues to projects and milestones but we will not explore these features today.</li>
 <li>When is issue is solved or no longer relevant, you can close it by clicking on “close issue” at the bottom. This will archive the issue. It will now disappear from the issues list.</li>
 </ol>
@@ -110,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>2. Clone an existing repository (and make changes) using GitKraken.</h1>
 <section id="creating-the-directory" class="level2">
 <h2 class="anchored" data-anchor-id="creating-the-directory">2.1 Creating the directory</h2>
-<p>In this section you will learn how to clone an existing directory to your computer. In this case you will clone the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a>.</p>
+<p>In this section you will learn how to clone an existing directory to your computer. In this case you will clone the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a>. This repository is meant to be a testing ground, so you do not have to worry about messing anything up.</p>
 <ol type="1">
 <li>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a></li>
 <li>Press the arrow next to the green “code” button <img src="Images/P1.png" class="img-fluid" alt="p1"></li>
@@ -126,10 +128,10 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Go to the directory location and check that the local directory has been created properly.</li>
 </ol>
-<p>Well done. You have now copied the directory to your computer. This is the local directory in which you can make changes.</p>
+<p>Well done. You have now copied the directory to your computer. This is the local directory in which you can make changes. If you want to you can now start working in the repository.</p>
 </section>
 <section id="opening-the-directory-in-gitkraken" class="level2">
-<h2 class="anchored" data-anchor-id="opening-the-directory-in-gitkraken">2.2 Opening the directory in <a href="https://gitkraken.dev">GitKraken</a></h2>
+<h2 class="anchored" data-anchor-id="opening-the-directory-in-gitkraken">2.2 Opening the directory in GitKraken</h2>
 <p>Now that you have created the directory, you will want to open it in GitKraken. To open the directory in GitKraken:</p>
 <ol type="1">
 <li><p>Open GitKraken</p></li>
@@ -149,7 +151,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Go to Rstudio by going to your repository and opening the Rproject within. Opening the project directly ensures that you are working in right repository and not the one previously opened in Rstudio.</p></li>
 <li><p>Open <em>Rscript.R</em>. Write your name as a comment (or anything else you want to write) and save the file.</p></li>
 <li><p>Move back to GitKraken. You will see that new changes have appeared (the orange pencil above the tip of your branch). <img src="Images/p6.png" class="img-fluid" alt="p6"></p></li>
-<li><p>Click on the orange pencil and look at the “Unstaged” window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made (and the cross in the top-right to return the previous view. When you are satifisfied with the changes click on <em>Stage all changes</em> to stash them. <img src="Images/p7.png" class="img-fluid" alt="p7"> The files will now move to the <em>staged</em> window. These are the files that have received the “mark of approval” to be commited. <img src="Images/p8.png" class="img-fluid" alt="p8"></p></li>
+<li><p>Click on the orange pencil and look at the “Unstaged” window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made (and the cross in the top-right to return the previous view). Here is an example, which shows the differences that were made to a file. The old version of the file is shown on the left. The new version is shown on the right. Lines that were removed are highlighted in red. Lines that were added are highlighted in green. <strong>The ability to highlight changes easily is one of the most powerful features of Git.</strong> <img src="Images/p17.png" class="img-fluid" alt="p17"></p></li>
+<li><p>When you are satisfied with the changes click on <em>Stage all changes</em> to stash them. <img src="Images/p7.png" class="img-fluid" alt="p7"> The files will now move to the <em>staged</em> window. These are the files that have received the “mark of approval” to be committed. <img src="Images/p8.png" class="img-fluid" alt="p8"></p></li>
 <li><p>In the <em>Commit Message</em> window below, provide a brief summary of the changes that you have made. Make it brief but informative to you and your collaborators. If you want to provide more detail about the changes you have mode you can write a lengthier explanation in the <em>description</em> box. <img src="Images/p9.png" class="img-fluid" alt="p9"> When you are ready press <em>commit</em>. Commits can be though of as “snapshots” or milestones of a project. You can think of it as saving a file on your computer under a new version number (i.e.&nbsp;project_v3 becomes project_v4).</p></li>
 <li><p>After you commit your changes, you will see that that your local repository (the little computer) will move ahead of the remote repository (the picture of the github repository). This means that the changes you made on your computer have not yet been uploaded to the remote repository and that your local branch is <em>ahead</em> of the remote repository. As a result, the changes you made are NOT yet visible on the remote repository. They will only become visible once you <em>push</em> the changes to the remote repository (i.e.&nbsp;GitHub). We will do so in the next exercise. When the local and the remote repository are located next to each other, there are no differences between the files on your computer and the files in the remote repository. In the picture below, you can see this is the case for the “main” branch. When the remote repository is ahead of your local repository, it means there are file changes on the remote repository that have not been <em>pulled</em> (= downloaded) to your computer yet, and that more recent versions of the files are available. <img src="Images/p11.png" class="img-fluid" alt="p11">.</p></li>
 </ol>
@@ -172,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="working-with-git-in-rstudio" class="level1">
 <h1>3. Working with GIT in Rstudio</h1>
-<p>You can also work with Git directly from Rstudio. The interface is a little more basic than graphical git clients like Gitkraken, but it is free and can do all the necessary things. You can find the Git section in the panel where the environment and history are located. If you have not changed the panel set-up of Rstudio this will be located in the top right corner.</p>
+<p>You can also work with Git directly from Rstudio. The interface is a little more basic than graphical git clients like Gitkraken, but it is free and can perform some of the basic tasks needed to work with Git. You can find the Git section in the panel where the environment and history are located. If you have not changed the panel set-up of Rstudio this will be located in the top right corner.</p>
 <p><img src="Images/Git_Rstudio1.png" class="img-fluid"></p>
 <ol type="1">
 <li>The branch you are working on can be seen on the right. If you change the Branch in Rstudio it will also change in Gitkraken (and vice versa).</li>
@@ -183,10 +186,21 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p><img src="Images/Git_Rstudio3.jpg" class="img-fluid"></p>
 <ol start="3" type="1">
-<li><p>The panel shows all the files that have been added (yellow when unstaged / green when staged), deleted (red) or modified (blue). In the image you can see some staged and some unstaged files.</p></li>
-<li></li>
+<li>The panel shows all the files that have been added (yellow when unstaged / green when staged), deleted (red) or modified (blue). In the image you can see some staged and some unstaged files.</li>
 </ol>
 <p><img src="Images/Git_Rstudio4.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li>You can inspect the changes made to the files by clicking on “Diff” in the top left. It will show the differences between the old (red) and the new (green) version of the file. Here is an example of the file that has been modified.</li>
+</ol>
+<p><img src="Images/Git_Rstudio5.png" class="img-fluid"></p>
+<ol start="5" type="1">
+<li>By clicking on history you can also get a graphical overview of the branch you are on the other branches that people are working on. You can also access the history directly from the Git panel.</li>
+</ol>
+<p><img src="Images/Git_Rstudio6.png" class="img-fluid"></p>
+<ol start="6" type="1">
+<li><p>Pushing, pulling, commiting can be done with their respective buttons, very similar to Gitkraken.</p></li>
+<li><p>More complicated tasks (including merging) need to be done in the terminal using commands.</p></li>
+</ol>
 </section>
 <section id="create-a-directory-for-one-of-your-projects" class="level1">
 <h1>4. Create a directory for one of your projects</h1>
