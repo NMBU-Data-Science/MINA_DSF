@@ -14,7 +14,7 @@ The repo provides a place for students and employees to discuss data managements
 
 -   [Happygitwithr](https://happygitwithr.com/index.html)
 -   [Gitkraken](https://www.gitkraken.com/)
--   The [exercises from our Git and GitHub introduction workshop](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/Git/Working_With_Git.md)
+-   The [exercises from our Git and GitHub introduction workshop](https://github.com/NMBU-Data-Science/MINA_DSF/blob/main/Exercises/Git/Working_With_Git.qmd)
 
 ## Creating Plots
 
