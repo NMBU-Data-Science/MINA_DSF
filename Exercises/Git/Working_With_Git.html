@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Simon D. Schowanek">
+
+<title>Git and Github Workshop</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Working_With_Git_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Working_With_Git_files/libs/quarto-html/quarto.js"></script>
+<script src="Working_With_Git_files/libs/quarto-html/popper.min.js"></script>
+<script src="Working_With_Git_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Working_With_Git_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Working_With_Git_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Working_With_Git_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Working_With_Git_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Working_With_Git_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Working_With_Git_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Git and Github Workshop</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Simon D. Schowanek </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="github-workshop-exercise" class="level1">
+<h1>Github Workshop Exercise</h1>
+<p>This exercise will help you get familiar with Git and Github. In this exercise you will learn</p>
+<ol type="1">
+<li>Install Git and all the tools to work with it.<br>
+</li>
+<li>Learn how to use Issues on GitHub.</li>
+<li>Learn how to clone an existing repository from Github</li>
+<li>Learn how to create your own repository</li>
+<li>Learn how to make changes to repositories using GitKraken and Rstudio, including:
+<ul>
+<li>how to commit, push and pull</li>
+<li>how to deal with merge conflicts</li>
+<li>How to integrate Git and Rstudio.</li>
+</ul></li>
+</ol>
+<p>This workshop is heavily based on the information provided in <a href="https://happygitwithr.com" class="uri">https://happygitwithr.com</a>. For detailed information, I recommend you visit this website.</p>
+</section>
+<section id="preparation" class="level1">
+<h1>0. Preparation</h1>
+<p>Before starting this tutorial make sure that you have</p>
+<ul>
+<li>a recent version of <a href="https://www.r-project.org">R</a></li>
+<li>a recent version of <a href="https://posit.co/download/rstudio-desktop/">Rstudio</a></li>
+<li>a <a href="https://github.com">GitHub</a> account</li>
+<li>downloaded Git (if you use an NMBU computer you can download it easily via the software centre). If not, <a href="https://happygitwithr.com/install-git">follow the following instructions</a>.</li>
+<li>downloaded <a href="https://gitkraken.dev">GitKraken</a></li>
+</ul>
+</section>
+<section id="using-the-issues-page-in-github" class="level1">
+<h1>1. Using the Issues page in Github</h1>
+<p>Issues are a useful collaboration feature from Github. This exercise teaches you how to use “Issues”.</p>
+<ol type="1">
+<li>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a> and click on the “Issues” tab.<img src="Images/p14.png" class="img-fluid" alt="p14"> This will bring you to the “Issues” page. Issues are the place on GitHub where collaboration happens. They are posts, where collaborators can discuss problems, track bugs, or work on tasks together. <img src="Images/p15.png" class="img-fluid" alt="p15"></li>
+<li>You an click on any issue to see the discussion. Click on the “Here is an example issue.” to see the discussion within. Leave a comment in the issue. You can tag collaborators using the “@” sign. You can also edit your comment using Markdown. You can also create a new issue.</li>
+<li>The panel on the right provides some tools to organise group work. <img src="Images/p16.png" class="img-fluid" alt="p16"> Clicking on “assignees” will let you assign people responsible for solving of keeping track of an issue. Clicking on “labels” lets you label issues, which can help you keep an overview of which sorts of problems exist. If you want to create a new label scroll down through the list of labels and click on “edit labels”. This will take you to a new window where you can modify labels however you want. You can also add issues to projects and milestones but we will not explore these features today.</li>
+<li>When is issue is solved or no longer relevant, you can close it by clicking on “close issue” at the bottom. This will archive the issue. It will now disappear from the issues list.</li>
+</ol>
+</section>
+<section id="clone-an-existing-repository-and-make-changes-using-gitkraken." class="level1">
+<h1>2. Clone an existing repository (and make changes) using GitKraken.</h1>
+<section id="creating-the-directory" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-directory">2.1 Creating the directory</h2>
+<p>In this section you will learn how to clone an existing directory to your computer. In this case you will clone the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a>. This repository is meant to be a testing ground, so you do not have to worry about messing anything up.</p>
+<ol type="1">
+<li>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a></li>
+<li>Press the arrow next to the green “code” button <img src="Images/P1.png" class="img-fluid" alt="p1"></li>
+<li>Copy link (use the https link)</li>
+<li>Go to Rstudio</li>
+<li>Select <em>file &gt; new project &gt; version control &gt; git</em></li>
+<li>Then
+<ul>
+<li>Past the URL</li>
+<li>Create a directory name</li>
+<li>Select directory location (<strong>Make sure you remember where you save the directory. This will become imporant</strong>)</li>
+<li>Create Project</li>
+</ul></li>
+<li>Go to the directory location and check that the local directory has been created properly.</li>
+</ol>
+<p>Well done. You have now copied the directory to your computer. This is the local directory in which you can make changes. If you want to you can now start working in the repository.</p>
+</section>
+<section id="opening-the-directory-in-gitkraken" class="level2">
+<h2 class="anchored" data-anchor-id="opening-the-directory-in-gitkraken">2.2 Opening the directory in GitKraken</h2>
+<p>Now that you have created the directory, you will want to open it in GitKraken. To open the directory in GitKraken:</p>
+<ol type="1">
+<li><p>Open GitKraken</p></li>
+<li><p>If this is your first repository, a repository manager should appear. If this does not happen, select <em>file &gt; open repo</em>. <img src="Images/p2.png" class="img-fluid" alt="p2"></p></li>
+<li><p>Select <em>Open a Repository</em> and select the directory in which you have placed the local repository and press open. A GitKraken interface with many lines should now appear. This interface shows the various branches that different people are working on and how they relate to each other. <img src="Images/p3.png" class="img-fluid" alt="p3"></p></li>
+</ol>
+</section>
+<section id="making-changes-to-the-directory" class="level2">
+<h2 class="anchored" data-anchor-id="making-changes-to-the-directory">2.3 Making changes to the directory</h2>
+<p>Once you can open the directory in GitKraken you will want to make changes to it. Here you will learn how to make changes to a local directory and learn how to how to push them to a remote repository (i.e.&nbsp;GitHub).</p>
+<section id="changing-and-adding-files" class="level3">
+<h3 class="anchored" data-anchor-id="changing-and-adding-files">Changing and Adding Files</h3>
+<ol type="1">
+<li><p>In GitKraken, make sure the MINA DSF directory is open. Do so by checking what it is saying in the topleft corner, under repository. You can press the little arrow to view all available repositories, though if this is your first experience with Git it will only show one repository. <img src="Images/p4.png" class="img-fluid" alt="p4"></p></li>
+<li><p>Right click on the main branch and select <em>Create Branch Here</em>. Select a branch name. You want to name it something that is meaningful to you and your collaborators. For the sake of this exercise, we will call this branch your “personal branch”. You have now created a new branch for you to work in (= “personal branch”). You can switch to any other branch by selecting the branch you work on in the topleft corner of your screen.</p></li>
+<li><p>For now, double check that you are working on your “personal branch” and NOT on the main branch. If you are working on the main branch you make changes directly to the “clean files” which you want to avoid. In addition, certain files or changes may not be visible if you have been working on them earlier but have not merged them with the main branch yet. <img src="Images/p5.png" class="img-fluid" alt="p5"></p></li>
+<li><p>Go to Rstudio by going to your repository and opening the Rproject within. Opening the project directly ensures that you are working in right repository and not the one previously opened in Rstudio.</p></li>
+<li><p>Open <em>Rscript.R</em>. Write your name as a comment (or anything else you want to write) and save the file.</p></li>
+<li><p>Move back to GitKraken. You will see that new changes have appeared (the orange pencil above the tip of your branch). <img src="Images/p6.png" class="img-fluid" alt="p6"></p></li>
+<li><p>Click on the orange pencil and look at the “Unstaged” window, at the right side of your screen. This window will show all the changes that have been made to the files that have not been staged yet. You can click on the file names to inspect which changes have been made (and the cross in the top-right to return the previous view). Here is an example, which shows the differences that were made to a file. The old version of the file is shown on the left. The new version is shown on the right. Lines that were removed are highlighted in red. Lines that were added are highlighted in green. <strong>The ability to highlight changes easily is one of the most powerful features of Git.</strong> <img src="Images/p17.png" class="img-fluid" alt="p17"></p></li>
+<li><p>When you are satisfied with the changes click on <em>Stage all changes</em> to stash them. <img src="Images/p7.png" class="img-fluid" alt="p7"> The files will now move to the <em>staged</em> window. These are the files that have received the “mark of approval” to be committed. <img src="Images/p8.png" class="img-fluid" alt="p8"></p></li>
+<li><p>In the <em>Commit Message</em> window below, provide a brief summary of the changes that you have made. Make it brief but informative to you and your collaborators. If you want to provide more detail about the changes you have mode you can write a lengthier explanation in the <em>description</em> box. <img src="Images/p9.png" class="img-fluid" alt="p9"> When you are ready press <em>commit</em>. Commits can be though of as “snapshots” or milestones of a project. You can think of it as saving a file on your computer under a new version number (i.e.&nbsp;project_v3 becomes project_v4).</p></li>
+<li><p>After you commit your changes, you will see that that your local repository (the little computer) will move ahead of the remote repository (the picture of the github repository). This means that the changes you made on your computer have not yet been uploaded to the remote repository and that your local branch is <em>ahead</em> of the remote repository. As a result, the changes you made are NOT yet visible on the remote repository. They will only become visible once you <em>push</em> the changes to the remote repository (i.e.&nbsp;GitHub). We will do so in the next exercise. When the local and the remote repository are located next to each other, there are no differences between the files on your computer and the files in the remote repository. In the picture below, you can see this is the case for the “main” branch. When the remote repository is ahead of your local repository, it means there are file changes on the remote repository that have not been <em>pulled</em> (= downloaded) to your computer yet, and that more recent versions of the files are available. <img src="Images/p11.png" class="img-fluid" alt="p11">.</p></li>
+</ol>
+</section>
+<section id="viewing-changes" class="level3">
+<h3 class="anchored" data-anchor-id="viewing-changes">Viewing Changes</h3>
+<ol type="1">
+<li><p>Now go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a> and look at the different branches on the GitHub page. <img src="Images/p10.png" class="img-fluid" alt="p10"> Because you have not <em>pushed</em> any changes to the remote repository yet, your branch name will not be in there, but there will be other branches. In other words, all the changes you made on your computer are not yet visible on the remote repository (see point 9 of the previous exercise).</p></li>
+<li><p>To upload the changes you made in your local repository, go to GitKraken and press <em>push</em> (= upload, the upwards pointing arrow in the top centre ribbon). This will send your committed changes to the remote repository (NOTE: if you are not a collaborator on the repository, you may not be able to push any changes. Contact Simon if you want to become a collaborator). They are now visible to your collaborators if they are viewing the branch you are working on the remote repository. The changes will not be visible in any other branch until your branch is merged with said other branch. At this point you have “saved your changes” online, but you have not “merged” them into the rest of the project. When multiple people are working on the same branch it is good practice to <em>pull</em> (= download) changes before you <em>push</em> (= upload) anything. This way you will not “reupload” an outdated file and undo work of your collaborators. <img src="Images/P12.png" class="img-fluid" alt="p12"></p></li>
+<li><p>Go to Rstudio and make an R-script where you post a link to your favourite wikipedia page as a comment. Save the Rscript in the <em>exercise scripts</em> folder which you will find the in the <em>exercise</em> folder in the Repository” (so –&gt; Respository_Name/Exercises/Exercise Scripts/YourRScript.R). <em>Push</em> the file to the remote repository.</p></li>
+<li><p>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a> and make sure you are viewing your “personal branch” (GitHub will resort to the main branch everytime you reload, see point 1 if you have forgotten how to do this). Click on <em>Rscript.R</em> or any other file you have modified. Notice how the changes you made and the Rscript you created are now visible when looking at your branch. Now select the main branch and inspect the file again. You will notice that neither the changes you made nor the script you created are visible here. This is because you haven’t merged your development branch with the main branch yet.</p></li>
+<li><p>Go to Gitkraken and make sure you are working on your “personal branch”. Then move to finder (mac) or file explorer (windows) and open your repository. Inspect the changes you made to <em>Rscript.R</em> as well as the Rscript you added yourself. Next, move back to Gitkraken and change the repository to main. Once again, open the repository in finder or file explorer and inspect <em>Rscript.R</em>. You will see that the changes you made to <em>Rscript.R</em> or no longer visible, nor is R-script you added visible. This is because you are now working on the main branch. The changes you made on your personal branch have not yet been incorporated here. <strong>You should always be mindful of which branch you are working on, because the branch you are working on determines which files and file versions you can see</strong></p></li>
+<li><p>We want to <em>merge</em> your branch into the main branch, and add all your changes to the main branch. However, while you were working on the script, other people have also been making changes (which means that you may now be looking at outdated files). We want to ensure that we do not “reupload” an outdated file and undo work of our collaborators. Therefore, we want want to make sure all our files are up-to-date. To download all these changes, go to the main branch and select <em>pull</em> (the downwards pointing arrow in the top centre area). This will update your main branch. However, keep in mind that you have now only updated the files in your main branch. The files in your development branch are still outdated. To solve this, merge the main branch into your personal branch. Select the main branch and drag it into your personal branch. Select <em>merge main into “your_branch”</em>. Your personal branch has now incorporated the latest changes of the main branch. You can now safely merge your personal branch into the main branch, without the risk of undoing changes from other collaborators.</p></li>
+<li><p>Go to GitKraken. Make sure you are on your “personal branch”. Select your branch and drag it into the main branch. Select <em>merge “your_branch” into main</em>. Your changes have now been incorporated into the main branch. You will see that your local branch (the little computer symbol) has moved ahead of the remote branch (your github profile picture) this mean that the main branch on your computer is ahead of the main branch of the remote repository (i.e.&nbsp;you collaborators will not be able to see your changes yet). Push the changes to the remote repository to resolve this. You can either right click on the local main branch and select push, or you can move to the main branch and press push at the top centre.</p></li>
+<li><p>Go to the <a href="https://github.com/SimonSchowanek/MINA_DSF">MINA DSF Github</a> and make sure you are viewing the main branch (see point 1 if you have forgotten how to do this). Click on <em>Rscript.R</em>. You will see that the changes you made are now visible on the main branch. Likewise, the changes you made to Rscript.R and the R-script you added will now also be visible in finder/file explorer when you are working on the main branch.</p></li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Be aware that the direction of the merge matters. Merging your personal branch into the main branch is not the same as merging the main branch into your personal branch. The former takes all the changes you made and adds them to the main branch, the latter takes the the changes from the main branch (generally these will be changes made by other collaborators) and adds them to your personal branch</strong></p>
+</blockquote>
+<ol start="9" type="1">
+<li>Finally, you can tell Git to stop tracking certain files or certain file types. You can do so by right clicking on the unstaged files and clicking on the “ignore” tab, but be careful! Doing this adds the item to a “.gitignore file, a file that lists all the items that Git should ignore in the repository. This can be useful when you work with data that is too large to upload to github or if you have files that you do not want to share publically. It can also be helpful to keep the global repository clean. If you press ignore, the files or filetypes will disappear from Gitkraken (though the files will still be there if you look for them in finder/file explorer). Be aware, that the .gitignore file is a file that can be pushed to the global repository. Practically, this means you ask git to ignore say, .html files and you push it to the global repository, it will affect the .gitignore files of other collaborations when they pull. Suddenly, their git will also ignore .html files. In other words, it is often best to keep these files local (i.e.&nbsp;to not push them). You can find more info <a href="https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files">here</a>.</li>
+</ol>
+<p><img src="Images/p18.png" class="img-fluid"></p>
+</section>
+</section>
+</section>
+<section id="working-with-git-in-rstudio" class="level1">
+<h1>3. Working with GIT in Rstudio</h1>
+<p>You can also work with Git directly from Rstudio. The interface is a little more basic than graphical git clients like Gitkraken, but it is free and can perform some of the basic tasks needed to work with Git. You can find the Git section in the panel where the environment and history are located. If you have not changed the panel set-up of Rstudio this will be located in the top right corner.</p>
+<p><img src="Images/Git_Rstudio1.png" class="img-fluid"></p>
+<ol type="1">
+<li>The branch you are working on can be seen on the right. If you change the Branch in Rstudio it will also change in Gitkraken (and vice versa).</li>
+</ol>
+<p><img src="Images/Git_Rstudio2.jpg" class="img-fluid"></p>
+<ol start="2" type="1">
+<li>To the left, you will find the button to create a new branch.</li>
+</ol>
+<p><img src="Images/Git_Rstudio3.jpg" class="img-fluid"></p>
+<ol start="3" type="1">
+<li>The panel shows all the files that have been added (yellow when unstaged / green when staged), deleted (red) or modified (blue). In the image you can see some staged and some unstaged files.</li>
+</ol>
+<p><img src="Images/Git_Rstudio4.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li>You can inspect the changes made to the files by clicking on “Diff” in the top left. It will show the differences between the old (red) and the new (green) version of the file. Here is an example of the file that has been modified.</li>
+</ol>
+<p><img src="Images/Git_Rstudio5.png" class="img-fluid"></p>
+<ol start="5" type="1">
+<li>By clicking on history you can also get a graphical overview of the branch you are on the other branches that people are working on. You can also access the history directly from the Git panel.</li>
+</ol>
+<p><img src="Images/Git_Rstudio6.png" class="img-fluid"></p>
+<ol start="6" type="1">
+<li><p>Pushing, pulling, commiting can be done with their respective buttons, very similar to Gitkraken.</p></li>
+<li><p>More complicated tasks (including merging) need to be done in the terminal using commands.</p></li>
+</ol>
+</section>
+<section id="create-a-directory-for-one-of-your-projects" class="level1">
+<h1>4. Create a directory for one of your projects</h1>
+<p>If you want to create a repository for an existing Rproject, have a look at these instructions by <a href="https://happygitwithr.com/existing-github-first.html">happygitwithr</a>. If you want to create a new project altogether it may be easier to start by creating a github repository and cloning it to your computer, like you did in the previous exercise.</p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
