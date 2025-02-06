@@ -1,7 +1,9 @@
 ---
 title: "Git and Github Workshop"
 author: "Simon D. Schowanek"
-format: html
+format: 
+    html:
+       self-contained: true
 editor: visual
 ---
 
@@ -27,7 +29,7 @@ Before starting this tutorial make sure that you have
 -   a recent version of [R](https://www.r-project.org)
 -   a recent version of [Rstudio](https://posit.co/download/rstudio-desktop/)
 -   a [GitHub](https://github.com) account
--   downloaded Git (if you use an NMBU computer you can download it easily via the software centre). If not, have a look at[ the following instructions](#0).
+-   downloaded Git (if you use an NMBU computer you can download it easily via the software centre). If not, have a look at[the following instructions](#0).
 -   downloaded [GitKraken](https://gitkraken.dev)
 
 # 1. Using the Issues page in Github
